@@ -15,6 +15,10 @@ jobs:
   continuous-training:
     runs-on: ubuntu-latest
     steps:
+      - name: Set up Node 16
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16'
       - name: Checkout repo
         uses: actions/checkout@v2
       - name: Train Model
@@ -38,10 +42,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add model/model.pkl.dvc
           git commit -m "Updating model serialization"
-      - name: Set up Node 16
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16'
       - uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
