@@ -1,4 +1,4 @@
-name: Continuous Integration/Continuous Deployment
+name: Continuous Integration/ Continuous Deployment
 on: [push]
 jobs:
   ci_cd:
