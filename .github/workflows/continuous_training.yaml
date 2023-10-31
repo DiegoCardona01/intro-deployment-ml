@@ -39,7 +39,7 @@ jobs:
           git add model/model.pkl.dvc
           git commit -m "Updating model serialization"
       - name: Set up Node 16
-        uses; actions/setup-node@v1
+        uses: actions/setup-node@v1
         with:
           node-version: '16'
       - uses: ad-m/github-push-action@master
